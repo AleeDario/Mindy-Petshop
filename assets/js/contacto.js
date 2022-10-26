@@ -1,3 +1,6 @@
+let  boton =  document.getElementById('submit-btn')
+boton.addEventListener('click', captura)
+
 function captura() {
   let nombre = document.getElementById("name").value;
 
