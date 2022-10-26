@@ -81,3 +81,39 @@
 .logo-footer{
     width: 12em;
 }
+
+/*contacto*/
+.main-contact {
+    display: flex;
+    flex-direction: column;
+}
+#formUbication {
+    width: 800px;
+    align-self: center;
+}
+.uwu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#username {
+    width: 390px;
+}
+#textArea {
+    margin-top: 10px;
+}
+.h2-contact {
+    text-align: center;
+}
+.map {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+#checks {
+    display: flex;
+    justify-content: space-around;
+}
+#button {
+    padding-top: 15px;
+}
