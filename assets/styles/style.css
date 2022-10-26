@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+/* Styles Carrousel y nav */
+
 .navbar{
     background-color: #e0e0e0;
 }
@@ -23,6 +26,49 @@
     object-fit: cover;
     object-position: 0% 40%;
 }
+
+/* Styles farmacia, juguetes y carrito */
+
+.main-container{
+    width: 90%;
+}
+
+.card{
+    width: 24em;
+    height: 47em;
+    border: 2px solid rgba(0,0,0,1);
+    border-radius: 0 2em;
+}
+
+.card-img-top{
+    border-radius: 0 2em 0 0;
+    height: 350px;
+    object-fit: cover;
+}
+
+.ultUnidades{
+    width: 60%;
+    padding: .5em;
+    border-radius: .3em;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+}
+
+.ultimaUnidad{
+    width: 46%;
+}
+
+.unidades{
+    width: 50%;
+    padding: .5em;
+    border-radius: .3em;
+    font-weight: bold;
+    background-color: green;
+    color: white;
+}
+
+/* Styles footer */
 
 .footer-container {
     background-color: rgb(188, 186, 186);
