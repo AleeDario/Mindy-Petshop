@@ -14,7 +14,7 @@ function captura() {
 
   let textoComen = document.getElementById("textArea").value;
 
-  let checks = document.getElementById("checks").value;
+  let checks = document.getElementById("inlineRadio").value;
 
   if (nombre == "") {
     swal("Información incompleta", "Intente nuevamente", "error");
@@ -49,20 +49,21 @@ function captura() {
 }
 captura();
 
-let checkBoxClass = Array.from(document.querySelectorAll("#flexCheck"));
+let checkBoxClass = Array.from(document.querySelectorAll("#inlineRadio"));
 
 console.log(checkBoxClass);
 
 checkBoxClass.forEach((checkbox) =>
   checkbox.addEventListener("click", checkboxFilters)
 );
+let checkBox = checkboxFilters();
 
 function checkboxFilters() {
   let checkboxFiltering = checkBoxClass
     .filter((check) => check.checked)
     .map((check) => check.value);
   console.log(checkboxFiltering);
-  if (checkboxFiltering.length !== 0) {
+  if (checkboxFiltering.length) {
     return checkboxFiltering.value;
   }
 }
