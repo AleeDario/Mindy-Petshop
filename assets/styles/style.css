@@ -171,3 +171,9 @@
     background-color: rgb(79, 79, 79);
     color: white;
 }
+
+@media screen and (max-width: 990px) {
+    .footer-primary{
+        flex-direction: column;
+    }
+}
