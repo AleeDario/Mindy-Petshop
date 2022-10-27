@@ -17,11 +17,13 @@ function captura() {
   let checks = document.getElementById("inlineRadio").value;
 
   if (nombre == "") {
-    swal("Información incompleta", "Intente nuevamente", "error");
+    swal("Información incompleta", "Nombre necesario", "error");
     document.getElementById("name");
   } else if (telefono == "") {
-    swal("Información incompleta", "Intente nuevamente", "error");
+    swal("Información incompleta", "Telefono necesario", "error");
     document.getElementById("phone");
+  } else if (typeof(nombre)==Number){
+    swal("Información incompleta", "Nombre necesario", "error");
   } else if (nombre !== "" && telefono !== "") {
     swal("¡Información enviada!", "Gracias", "success");
   }
@@ -54,12 +56,12 @@ let checkBoxClass = Array.from(document.querySelectorAll("#inlineRadio"));
 checkBoxClass.forEach((checkbox) =>
   checkbox.addEventListener("click", checkboxFilters)
 );
-let checkBox = checkboxFilters();
 
 function checkboxFilters() {
   let checkboxFiltering = checkBoxClass
     .filter((check) => check.checked)
     .map((check) => check.value);
-    return checkboxFiltering.value;
+    console.log(checkboxFiltering);
+    return checkboxFiltering;
+    
   }
-
