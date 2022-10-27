@@ -41,6 +41,32 @@
                         <li class="nav-item">
                             <a class="nav-link" href="../pages/contacto.html">Contacto</a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <img src="../assets/img/shop.jpg" class="nav-link dropdown-toggle img-fluid" height="70px"
+                                width="70px" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false"></img>
+                            <div id="carrito" class="dropdown-menu p-2" aria-labelledby="navbarCollapse">
+                                <table id="lista-carrito" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Imagen</th>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="cuerpoCarrito">
+        
+                                    </tbody>
+                                    <tbody id="cuerpoTotal">
+                                        
+                                    </tbody>
+                                </table>
+
+                                <a id="vaciarCarrito" class="btn btn-danger boton-carrito">Vaciar Carrito</a>
+                                <a href="./carrito.html" id="procesar-pedido" class="btn btn-success boton-carrito">Finalizar compra</a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>

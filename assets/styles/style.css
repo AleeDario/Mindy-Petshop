@@ -7,7 +7,7 @@
 
 /* Styles Carrousel y nav */
 
-.navbar {
+.header-container {
     background-color: #a6bfcc ;
 }
 
@@ -170,6 +170,17 @@
 #submit-btn:hover {
     background-color: rgb(79, 79, 79);
     color: white;
+}
+
+.boton-carrito{
+    width: 75%;
+    padding: .5em;
+    margin: .5em;
+    margin-left: 2em;
+}
+
+td{
+    font-size: .9rem;
 }
 
 @media screen and (max-width: 990px) {
