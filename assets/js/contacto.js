@@ -1,5 +1,5 @@
-let  boton =  document.getElementById('submit-btn')
-boton.addEventListener('click', captura)
+let boton = document.getElementById("submit-btn");
+boton.addEventListener("click", captura);
 
 function captura() {
   let nombre = document.getElementById("name").value;
@@ -14,7 +14,15 @@ function captura() {
 
   let textoComen = document.getElementById("textArea").value;
 
-  swal("¡Información enviada!", "Gracias", "success");
+  if (nombre == "") {
+    swal("Información incompleta", "Intente nuevamente", "error");
+    document.getElementById("name").focus();
+  } else if (telefono == "") {
+    swal("Información incompleta", "Intente nuevamente", "error");
+    document.getElementById("phone").focus();
+  } else if (nombre !== "" && telefono !== "") {
+    swal("¡Información enviada!", "Gracias", "success");
+  }
 
   console.log(
     nombre +
