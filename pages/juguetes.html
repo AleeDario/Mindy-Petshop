@@ -11,7 +11,7 @@
 </head>
 <body class="body-container">
     <header class="header-container">
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg mx-5">
             <div class="container-fluid">
                 <a href="../index.html"><img src="../assets/img/logo_mindy_uno.png" class="img-logo ms-5"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -37,6 +37,32 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <img src="../assets/img/shop.jpg" class="nav-link dropdown-toggle img-fluid" height="70px"
+                                width="70px" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false"></img>
+                            <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                                <table id="lista-carrito" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Imagen</th>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="cuerpoCarrito">
+        
+                                    </tbody>
+                                    <tbody id="cuerpoTotal">
+                                        
+                                    </tbody>
+                                </table>
+
+                                <a id="vaciarCarrito" class="btn btn-danger boton-carrito">Vaciar Carrito</a>
+                                <a href="./carrito.html" id="procesar-pedido" class="btn btn-success boton-carrito">Finalizar compra</a>
+                            </div>
                         </li>
                     </ul>
                 </div>
