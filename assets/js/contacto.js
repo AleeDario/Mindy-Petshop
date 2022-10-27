@@ -18,10 +18,10 @@ function captura() {
 
   if (nombre == "") {
     swal("Información incompleta", "Nombre necesario", "error");
-    document.getElementById("name");
+    document.getElementById("name").focus();
   } else if (telefono == "") {
     swal("Información incompleta", "Telefono necesario", "error");
-    document.getElementById("phone");
+    document.getElementById("phone").focus();
   } else if (typeof(nombre)==Number){
     swal("Información incompleta", "Nombre necesario", "error");
   } else if (nombre !== "" && telefono !== "") {
