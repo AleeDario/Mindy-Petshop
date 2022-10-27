@@ -47,11 +47,9 @@ function captura() {
   localStorage.setItem("textoComen", textoComen);
   localStorage.setItem("checks", checks);
 }
-captura();
+
 
 let checkBoxClass = Array.from(document.querySelectorAll("#inlineRadio"));
-
-console.log(checkBoxClass);
 
 checkBoxClass.forEach((checkbox) =>
   checkbox.addEventListener("click", checkboxFilters)
@@ -62,8 +60,6 @@ function checkboxFilters() {
   let checkboxFiltering = checkBoxClass
     .filter((check) => check.checked)
     .map((check) => check.value);
-  console.log(checkboxFiltering);
-  if (checkboxFiltering.length) {
     return checkboxFiltering.value;
   }
-}
+
