@@ -26,7 +26,7 @@
 .nav-link {
     color: white;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.0em;
 }
 
 .nav-link:hover {
@@ -68,7 +68,7 @@
 }
 
 .history-img img {
-    width: 100%;
+    width: 100%;   
 }
 
 .history-text {
@@ -84,9 +84,9 @@
 
 .misionyvision-container {
     width: 100%;
+    justify-content: space-around;
     background-color: #a6bfcc;
     margin-top: 2.5em;
-    gap: 2em;
     padding: 2em;
 }
 
@@ -97,17 +97,11 @@
     gap: 2em;
 }
 
-.mision-img img {
-    width: 100%;
-    padding-top: 1em;
-}
-
 .mision-text {
     background-color: rgba(255, 255, 255, 0.638);
     border-radius: 2em;
     padding: 2em 2em .1em 2em;
     text-align: center;
-    margin-bottom: 1em;
     box-shadow: 9px 11px 23px 5px rgba(44, 44, 44, 0.8);
 }
 
@@ -122,19 +116,16 @@
 }
 
 .vision-container {
-    width: 50%;
-    height: 45vh;
+    width: 60%;
     display: flex;
-    gap: 2em;
 }
 
 .vision-img {
-    width: 43.5%;
+    width: 25.5%;
 }
 
 .vision-img img {
     width: 100%;
-    padding-top: 1em;
 }
 
 .vision-text {
@@ -158,10 +149,10 @@
     font-size: .9em;
 }
 
-.brands-carousel {
-    width: 50%;
-    margin-left: 23em;
-    margin-top: 2em;
+.img-marcas{
+    height: 250px;
+    width: 60px;
+    object-fit: contain;
 }
 
 /* Styles farmacia, juguetes y carrito */
@@ -338,14 +329,12 @@
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
-
 }
 
 .uwu {
     display: flex;
     flex-wrap: wrap;
     gap: 2%;
-
 }
 
 #username {
@@ -359,16 +348,14 @@
 .h2-contact {
     text-align: center;
     color: #4a626d;
-    ;
 }
 
 .h4-contact {
     color: #4a626d;
-    ;
 }
 
 .form-check-label {
-    color: #4a626d;
+    color: #6d4a4a;
     ;
 }
 
@@ -410,6 +397,7 @@ td {
     font-size: .9rem;
 }
 
+
 @media screen and (max-width: 990px) {
     .footer-primary {
         flex-direction: column;
@@ -418,5 +406,36 @@ td {
     .nav-link{
         padding-left: 30px;
         padding-right: 30px;
-     }
+    }
 }
+@media screen and (max-width: 720px){
+    .misionyvision-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .vision-container {
+        width: 100%;
+    }
+    .mision-container{
+        width: 100%;
+    }
+    .history-text {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 500px){
+    .vision-img{
+        display: none;
+    }
+    .vision-text {
+        width: 100%;
+    }
+    .history-text {
+        width: 90%;
+        font-size: .8em;
+    }
+}
+
