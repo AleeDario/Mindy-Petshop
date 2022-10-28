@@ -414,4 +414,9 @@ td {
     .footer-primary {
         flex-direction: column;
     }
+
+    .nav-link{
+        padding-left: 30px;
+        padding-right: 30px;
+     }
 }

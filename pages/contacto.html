@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="../assets/img/favicon.ico"
+      href="../assets/img/favicon_mindy.png"
       type="image/x-icon"
     />
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -48,6 +48,31 @@
                       <li class="nav-item">
                           <a class="nav-link active" href="#">Contacto</a>
                       </li>
+                      <li class="nav-item dropdown-center">
+                        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="50,20">
+                            <img src="../assets/img/shop.jpg" class="img-fluid"
+                            width="50px"></img>
+                          </button>
+                        <div id="carrito" class="dropdown-menu text-center" aria-labelledby="dropdownMenuOffset">
+                            <table id="lista-carrito" class="table">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2" class="text-center">Producto</th>
+                                        <th>Precio</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cuerpoCarrito">
+    
+                                </tbody>
+                                <tbody id="cuerpoTotal">
+                                    
+                                </tbody>
+                            </table>
+
+                            <a id="vaciarCarrito" class="btn btn-danger boton-carrito">Vaciar Carrito</a>
+                            <a href="./carrito.html" id="procesar-pedido" class="btn btn-success boton-carrito">Finalizar compra</a>
+                        </div>
+                    </li>
                   </ul>
               </div>
           </div>
@@ -162,7 +187,7 @@
     </main>
     <img src="../assets/img/footer-wave.svg">
     <footer class="footer-container d-flex flex-column">
-        <div class="d-flex justify-content-around py-4 footer-primary">
+        <div class="d-flex justify-content-around py-4 footer-primary gap-5">
             <div class="logo-footer-container text-center">
                 <img class="logo-footer" src="../assets/img/footerLogo.png" alt="logo Mindy">
                 <h5>Síguenos en redes:</h5>
