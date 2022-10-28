@@ -373,7 +373,6 @@
 
 .form-check-label {
     color: #6d4a4a;
-    ;
 }
 
 #checks {
@@ -391,7 +390,6 @@
     border: solid 1px;
     border-radius: 5px;
     background-color: #4a626d;
-    ;
     color: white;
     height: 40px;
 
@@ -399,7 +397,6 @@
 
 #submit-btn:hover {
     background-color: #4a626da1;
-    ;
     color: #1a282e;
 }
 
