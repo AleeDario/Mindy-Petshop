@@ -17,6 +17,12 @@
     color: #883997 !important;
 }
 
+.active-p{
+    background: #cfd8dc;
+    border-radius: 10px 0px 10px 0px;
+    color: #883997!important;  
+} 
+
 .nav-link {
     color: white;
     font-weight: bold;
@@ -38,7 +44,7 @@
 
 .img-logo {
     width: 70%;
-    height: 18vh;
+    height: 10vh;
 }
 
 .img-carrusel {
@@ -158,33 +164,21 @@
     margin-top: 2em;
 }
 
-
 /* Styles farmacia, juguetes y carrito */
 
 .main-container {
-    width: 90%;
-}
-
-.card {
-    width: 24em;
-    height: 47em;
-    border: 2px solid rgba(0, 0, 0, 1);
-    border-radius: 0 2em;
-}
-
-.card-img-top {
-    border-radius: 0 2em 0 0;
-    height: 350px;
-    object-fit: cover;
+    width: 100%;
 }
 
 .ultUnidades {
     width: 60%;
-    padding: .5em;
+    padding: .1em;
+    margin-top: .4em;
     border-radius: .3em;
     font-weight: bold;
-    background-color: red;
+    background-color: rgb(253, 34, 34);
     color: white;
+    text-align: center;
 }
 
 .ultimaUnidad {
@@ -192,12 +186,100 @@
 }
 
 .unidades {
-    width: 50%;
-    padding: .5em;
+    width: 60%;
+    padding: .1em;
+    margin-top: .4em;
     border-radius: .3em;
-    font-weight: bold;
-    background-color: green;
+    background-color: rgb(43, 139, 43);
     color: white;
+    text-align: center;
+}
+
+/* Edicion Cards */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 365px;
+    height: 490px;
+    padding: .8em;
+    background: #eeeeee;
+    position: relative;
+    overflow: visible;
+    border-radius: 15px 0px 15px 0px;
+    box-shadow: 0 2px 4px rgba(240, 70, 255, 0.692), 0 2px 4px rgba(231, 62, 247, 0.692); 
+   }
+   
+   .card-img {
+    background-color: #ffa6ec;
+    height: 40%;
+    width: 100%;
+    border-radius: .5rem;
+    transition: .3s ease;
+    object-fit: cover;
+   }
+   
+   svg {
+    width: 20px;
+    height: 20px;
+   }
+   
+   .card-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5em;
+    border-top: 1px solid #ddd;
+    background-color: transparent;
+   }
+   
+   /*Text*/
+   .text-title {
+    font-weight: 900;
+    color: #9c27b0;
+    font-size: 0.9em;
+    line-height: 1.2;
+   }
+   
+   .text-body {
+    font-size: .8em;
+    border-radius: .3em;
+    color: #373737 !important;
+   }
+   
+   /*Button*/
+   .card-button {
+    border: 1px solid #f698ff;
+    display: flex;
+    padding: .4em;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: .2s ease-in-out;
+   }
+   
+   /*Hover*/
+   .card-img:hover {
+    transform: translateY(-15%);
+    box-shadow: rgba(218, 31, 255, 0.25) 0px 13px 47px -5px, rgba(252, 47, 241, 0.486) 0px 8px 16px -8px;
+   }
+   
+   .card-button:hover {
+    border: 1px solid  #a32dad;
+    background-color: #ffb0ee;
+   }
+
+/* Deco juguetes y farmacia */
+
+.container-search{
+    background-color: #c58acfbb;
+    padding: 0.2em;
+    border-radius: 30px;
+}
+
+.iconos-jyf{
+    height: 50px;
+    width: 50px;
 }
 
 /* Styles footer */
