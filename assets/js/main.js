@@ -242,7 +242,7 @@ async function petshop() {
         } else {
             carrito2.cantidad--
             document.getElementById(`cantidad-${id}`).innerHTML = carrito2.cantidad
-            document.getElementById(`total-${id}`).innerHTML = carrito2.precio * carrito2.cantidad
+            document.getElementById(`total-${id}`).innerHTML = `$${carrito2.precio * carrito2.cantidad}`
             carritoFiltrado = carritoFiltrado.map(elemento => {
                 if (elemento._id === id) {
                     return carrito2
@@ -262,7 +262,7 @@ async function petshop() {
             Swal.fire({
                 position: 'center',
                 icon: 'error',
-                title: 'No puedes sumar mas la cantidad de este elemento',
+                title: 'Stock maximo alcanzado',
                 showConfirmButton: false,
                 timer: 1000
             })
@@ -271,7 +271,7 @@ async function petshop() {
         } else {
             carrito2.cantidad++
             document.getElementById(`cantidad-${id}`).innerHTML = carrito2.cantidad
-            document.getElementById(`total-${id}`).innerHTML = carrito2.precio * carrito2.cantidad
+            document.getElementById(`total-${id}`).innerHTML = `$${carrito2.precio * carrito2.cantidad}`
             carritoFiltrado = carritoFiltrado.map(elemento => {
                 if (elemento._id === id) {
                     return carrito2
