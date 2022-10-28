@@ -48,32 +48,31 @@ async function petshop() {
         </tr>
         `
         }
-    } else if (document.title.includes('Juguetes') || document.title.includes('Farmacia') || document.title.includes('Home') || document.title.includes('Contacto')) {
-        carritoFiltrado.forEach(imprimirCarrito)
-        let sumaTotal = filtadoSuma(carritoFiltrado)
+    }
+    carritoFiltrado.forEach(imprimirCarrito)
+    let sumaTotal = filtadoSuma(carritoFiltrado)
 
-        function filtadoSuma(array) {
-            let inicio = 0
-            let total = array.reduce((element1, element2) => element1 + element2.precio, inicio)
+    function filtadoSuma(array) {
+        let inicio = 0
+        let total = array.reduce((element1, element2) => element1 + element2.precio, inicio)
 
-            return total
-        }
+        return total
+    }
 
-        imprimirTotal(sumaTotal)
+    imprimirTotal(sumaTotal)
 
 
-        function imprimirTotal(total) {
+    function imprimirTotal(total) {
 
-            cuerpoTotal.innerHTML = `
+        cuerpoTotal.innerHTML = `
         <tr>
             <td colspan="2">Total :</td>
             <td>$${total}</td>
         </tr>
         `
-        }
-
-        vaciarCarrito.addEventListener('click', vaciarElCarrito)
     }
+
+    vaciarCarrito.addEventListener('click', vaciarElCarrito)
 
     function vaciarElCarrito() {
         localStorage.removeItem('carrito')
@@ -117,14 +116,14 @@ async function petshop() {
         let botonCarrito = Array.from(document.querySelectorAll('.botonCarrito'))
         botonCarrito.forEach(boton => {
             boton.addEventListener('click', function () {
-                addCarrito(boton.value, boton.id)
+                addCarrito(boton.value)
             })
         })
     }
 
     botonCarritoOn()
 
-    function addCarrito(nombre, id) {
+    function addCarrito(nombre) {
         if (!carrito.includes(nombre)) {
             carrito.push(nombre)
             localStorage.setItem('carrito', JSON.stringify(carrito))
@@ -133,9 +132,8 @@ async function petshop() {
             if (document.title.includes('Carrito')) {
                 carritoFiltrado.forEach(imprimirElementos)
 
-            } else if (document.title.includes('Juguetes') || document.title.includes('Farmacia') || document.title.includes('Home') || document.title.includes('Contacto')) {
-                carritoFiltrado.forEach(imprimirCarrito)
             }
+            carritoFiltrado.forEach(imprimirCarrito)
             let sumaTotal = filtadoSuma(carritoFiltrado)
             imprimirTotal(sumaTotal)
             Swal.fire({
@@ -153,9 +151,8 @@ async function petshop() {
             if (document.title.includes('Carrito')) {
                 carritoFiltrado.forEach(imprimirElementos)
 
-            } else if (document.title.includes('Juguetes') || document.title.includes('Farmacia') || document.title.includes('Home') || document.title.includes('Contacto')) {
-                carritoFiltrado.forEach(imprimirCarrito)
             }
+            carritoFiltrado.forEach(imprimirCarrito)
             let sumaTotal = filtadoSuma(carritoFiltrado)
             imprimirTotal(sumaTotal)
             Swal.fire(
@@ -174,7 +171,7 @@ async function petshop() {
             <td class="text-black text-center fw-semibold">${array.nombre}</td>
             <td class="text-black text-center fw-semibold">$${array.precio}</td>
             <td class="text-black text-center fw-semibold">
-            <button id="menos-${array._id}" class="border-0 bg-transparent botonCambioMenos">
+            <button id="menos-${array._id}" value="${array.nombre}" class="border-0 bg-transparent botonCambioMenos">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#4f706f" class="bi bi-dash-square product-name-subtract delete" style="z-index: 2;" viewBox="0 0 16 16">
                 <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"></path>
                 <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"></path>
@@ -192,13 +189,35 @@ async function petshop() {
 
     botonMenos = [...document.querySelectorAll('.botonCambioMenos')].forEach(element => element.addEventListener('click', function (e) {
         let id = e.currentTarget.id.split('-')[1]
+        let nombre = e.currentTarget.value
         let carrito2 = carritoFiltrado.find(elemento => elemento._id === id)
         if (carrito2.cantidad === 1) {
-            document.getElementById(id).remove()
-            carritoFiltrado = carritoFiltrado.filter(elemento => elemento._id !== id)
-            localStorage.removeItem()
-            sumaTotalCarrito = filtadoSumaCarrito(carritoFiltrado)
-            imprimirTotalCarrito(sumaTotalCarrito)
+            Swal.fire({
+                title: "Seguro quieres eliminar este elemento de la lista ?",
+                text: "¡No podrás deshacer esta acción!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Si, estoy seguro.",
+                cancelButtonText: "Cancelar.",
+                closeOnConfirm: false
+            }).then((result) => {
+                if (result.value) { // This check here. This contains value for the delete button. Its null for cancel button
+                    document.getElementById(id).remove()
+                    carritoFiltrado = carritoFiltrado.filter(elemento => elemento._id !== id)
+                    sumaTotalCarrito = filtadoSumaCarrito(carritoFiltrado)
+                    imprimirTotalCarrito(sumaTotalCarrito)
+                    console.log(localStorage.getItem('carrito'))
+                    carrito = carrito.filter(elemento => elemento !== nombre)
+                    localStorage.setItem('carrito', JSON.stringify(carrito))
+                    cuerpoCarrito.innerHTML = ``
+                    carritoFiltrado = petshopMindy.filter(elemento => carrito.includes(elemento.nombre))
+                    carritoFiltrado.forEach(imprimirCarrito)
+                    sumaTotal = filtadoSuma(carritoFiltrado)
+                    imprimirTotal(sumaTotal)
+                }
+            })
+
         } else {
             carrito2.cantidad--
             document.getElementById(`cantidad-${id}`).innerHTML = carrito2.cantidad
