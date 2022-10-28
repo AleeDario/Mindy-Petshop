@@ -8,13 +8,13 @@
 /* Styles Carrousel y nav */
 
 .header-container {
-    background-color: #a6bfcc ;
+    background-color: #a6bfcc;
 }
 
-.active{
+.active {
     background: #cfd8dc;
     border-radius: 10px 0px 10px 0px;
-    color: #883997!important;  
+    color: #883997 !important;
 }
 
 .nav-link {
@@ -24,13 +24,15 @@
 }
 
 .nav-link:hover {
-    background: linear-gradient(45deg, rgb(193, 131, 255) 0%, rgb(208, 89, 255) 50%, rgb(201, 155, 247) 100%);;
+    background: linear-gradient(45deg, rgb(193, 131, 255) 0%, rgb(208, 89, 255) 50%, rgb(201, 155, 247) 100%);
+    ;
     border-radius: 10px 0px 10px 0px;
     color: white !important;
 }
 
-.dropdown-item:hover{
-    background: linear-gradient(45deg, rgb(193, 131, 255) 0%, rgb(208, 89, 255) 50%, rgb(201, 155, 247) 100%);;
+.dropdown-item:hover {
+    background: linear-gradient(45deg, rgb(193, 131, 255) 0%, rgb(208, 89, 255) 50%, rgb(201, 155, 247) 100%);
+    ;
     color: white;
 }
 
@@ -46,9 +48,116 @@
     object-position: 0% 40%;
 }
 
+/* main index */
 .body-container {
-    background-color: #f5f5f5;
+    background-image: url("/assets/img/bg-body.png");
 }
+
+.history-img {
+    width: 50%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.history-img img {
+    width: 100%;
+}
+
+.history-text {
+    color: white;
+    width: 50%;
+    background-color: #883997;
+    padding: 1.5em 4em .5em 4em;
+    border-radius: 2em;
+    box-shadow: 9px 11px 23px 5px rgba(44, 44, 44, 0.8);
+    text-align: center;
+    line-height: 2em;
+}
+
+.misionyvision-container {
+    width: 100%;
+    background-color: #a6bfcc;
+    margin-top: 2.5em;
+    gap: 2em;
+    padding: 2em;
+}
+
+.mision-container {
+    width: 40%;
+    display: flex;
+    padding-top: 2em;
+    gap: 2em;
+}
+
+.mision-img img {
+    width: 100%;
+    padding-top: 1em;
+}
+
+.mision-text {
+    background-color: rgba(255, 255, 255, 0.638);
+    border-radius: 2em;
+    padding: 2em 2em .1em 2em;
+    text-align: center;
+    margin-bottom: 1em;
+    box-shadow: 9px 11px 23px 5px rgba(44, 44, 44, 0.8);
+}
+
+.mision-text h2 {
+    color: #6a0080;
+}
+
+.mision-text p {
+    color: #3b4a51;
+    line-height: 2em;
+    font-size: .9em;
+}
+
+.vision-container {
+    width: 50%;
+    height: 45vh;
+    display: flex;
+    gap: 2em;
+}
+
+.vision-img {
+    width: 43.5%;
+}
+
+.vision-img img {
+    width: 100%;
+    padding-top: 1em;
+}
+
+.vision-text {
+    width: 75%;
+    line-height: 2em;
+    background-color: rgba(255, 255, 255, 0.638);
+    border-radius: 2em;
+    padding: 2em 2em 0 2em;
+    text-align: center;
+    margin-top: 2em;
+    box-shadow: 9px 11px 23px 5px rgba(44, 44, 44, 0.8);
+}
+
+.vision-text h2 {
+    color: #6a0080;
+}
+
+.vision-text p {
+    color: #3b4a51;
+    line-height: 2em;
+    font-size: .9em;
+}
+
+.brands-carousel {
+    width: 50%;
+    margin-left: 23em;
+    margin-top: 2em;
+}
+
 
 /* Styles farmacia, juguetes y carrito */
 
@@ -92,15 +201,14 @@
 }
 
 /* Styles footer */
-
 .footer-container {
     background-color: #a6bfcc;
-    /* border-top: #5c007a  solid .2em; */
     color: #4a626d;
+    margin-top: -1.8em;
 }
 
-.footer-container h3{
-    color:#6a0080;
+.footer-container h3 {
+    color: #6a0080;
 }
 
 .redes-img {
@@ -111,9 +219,29 @@
     width: 12em;
 }
 
-.footer-container2{
+.footer-container2 {
     background-color: #4a626d;
 }
+
+.map {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.map-text img {
+    width: 1.4em;
+}
+
+.map-text a {
+    text-decoration: none;
+    color: #3b4a51;
+}
+
+.map-text {
+    line-height: 1em;
+}
+
 
 /*contacto*/
 .main-contact {
@@ -122,75 +250,86 @@
     padding: 2rem;
     gap: 2rem;
 }
+
 #formUbication {
     width: 100vw;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
-  
+
 }
+
 .uwu {
     display: flex;
     flex-wrap: wrap;
     gap: 2%;
 
 }
+
 #username {
-    width: 49%    
-} 
+    width: 49%
+}
+
 #textArea {
     margin-top: 10px;
 }
+
 .h2-contact {
     text-align: center;
-    color:  #4a626d;;
+    color: #4a626d;
+    ;
 }
+
 .h4-contact {
-    color:  #4a626d;;
+    color: #4a626d;
+    ;
 }
+
 .form-check-label {
-    color:  #4a626d;;
+    color: #4a626d;
+    ;
 }
-.map {
-    display: flex;
-    justify-content: center;
-    padding-top: 25px;
-}
+
 #checks {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 
 }
+
 #button {
     padding-top: 15px;
 }
+
 #submit-btn {
     border: solid 1px;
     border-radius: 5px;
-    background-color:  #4a626d;;
+    background-color: #4a626d;
+    ;
     color: white;
     height: 40px;
 
 }
+
 #submit-btn:hover {
-    background-color:  #4a626da1;;
-    color:#1a282e;
+    background-color: #4a626da1;
+    ;
+    color: #1a282e;
 }
 
-.boton-carrito{
+.boton-carrito {
     width: 75%;
     padding: .5em;
     margin: .5em;
     margin-left: 2em;
 }
 
-td{
+td {
     font-size: .9rem;
 }
 
 @media screen and (max-width: 990px) {
-    .footer-primary{
+    .footer-primary {
         flex-direction: column;
     }
 }
