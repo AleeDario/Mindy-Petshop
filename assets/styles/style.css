@@ -7,6 +7,10 @@
 
 /* Styles Carrousel y nav */
 
+.noMostrar{
+    display: none;
+}
+
 .header-container {
     background-color: #a6bfcc;
 }
@@ -416,6 +420,10 @@ td {
         gap: 2em;
     }
 
+    td{
+        font-size: 1rem;
+    }
+
     .nav-link{
         padding-left: 30px;
         padding-right: 30px;
@@ -450,6 +458,10 @@ td {
 @media screen and (max-width: 500px){
     .vision-img{
         display: none;
+    }
+
+    td{
+        font-size: .5rem;
     }
 
     .container-search{

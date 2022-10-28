@@ -29,6 +29,7 @@ async function petshop() {
     carritoFiltrado = petshopMindy.filter(elemento => carrito.includes(elemento.nombre))
     if (document.title.includes('Carrito')) {
         carritoFiltrado.forEach(imprimirElementos)
+        sinElementos(carritoFiltrado)
         function filtadoSumaCarrito(array) {
             let inicio = 0
             let total = array.reduce((element1, element2) => element1 + element2.precio * element2.cantidad, inicio)
@@ -42,14 +43,17 @@ async function petshop() {
 
             tablaCarritoTotal.innerHTML = `
         <tr>
-            <td colspan="2" class="text-center">Total :</td>
-            <td colspan="4"></td>
-            <td>$${total}</td>
+            <td colspan="2" class="text-center fw-semibold">Total :</td>
+            <td colspan="4" class="fw-semibold"></td>
+            <td class="fw-semibold">$${total}</td>
         </tr>
         `
         }
     }
     carritoFiltrado.forEach(imprimirCarrito)
+    if (document.title.includes('Carrito')) {
+        sinElementos(carritoFiltrado)
+    }
     let sumaTotal = filtadoSuma(carritoFiltrado)
 
     function filtadoSuma(array) {
@@ -82,6 +86,9 @@ async function petshop() {
         imprimirTotal(sumaTotal)
         cuerpoCarrito.innerHTML = ``
         elementContainer.innerHTML = ``
+        if (document.title.includes('Carrito')) {
+            sinElementos(carritoFiltrado)
+        }
         if (minId.value.length !== 0 || maxId.value.length !== 0 || searchId.value.length !== 0) {
             filtrar()
         } else {
@@ -133,9 +140,13 @@ async function petshop() {
             carritoFiltrado = petshopMindy.filter(elemento => carrito.includes(elemento.nombre))
             if (document.title.includes('Carrito')) {
                 carritoFiltrado.forEach(imprimirElementos)
+                sinElementos(carritoFiltrado)
 
             }
             carritoFiltrado.forEach(imprimirCarrito)
+            if (document.title.includes('Carrito')) {
+                sinElementos(carritoFiltrado)
+            }
             let sumaTotal = filtadoSuma(carritoFiltrado)
             imprimirTotal(sumaTotal)
             Swal.fire({
@@ -153,9 +164,13 @@ async function petshop() {
             carritoFiltrado = petshopMindy.filter(elemento => carrito.includes(elemento.nombre))
             if (document.title.includes('Carrito')) {
                 carritoFiltrado.forEach(imprimirElementos)
+                sinElementos(carritoFiltrado)
 
             }
             carritoFiltrado.forEach(imprimirCarrito)
+            if (document.title.includes('Carrito')) {
+                sinElementos(carritoFiltrado)
+            }
             let sumaTotal = filtadoSuma(carritoFiltrado)
             imprimirTotal(sumaTotal)
             Swal.fire(
@@ -216,6 +231,9 @@ async function petshop() {
                     cuerpoCarrito.innerHTML = ``
                     carritoFiltrado = petshopMindy.filter(elemento => carrito.includes(elemento.nombre))
                     carritoFiltrado.forEach(imprimirCarrito)
+                    if (document.title.includes('Carrito')) {
+                        sinElementos(carritoFiltrado)
+                    }
                     sumaTotal = filtadoSuma(carritoFiltrado)
                     imprimirTotal(sumaTotal)
                 }
@@ -291,6 +309,20 @@ function rango(array, rangoMin, rangoMax) {
     }
 
     return elementsFilterRango
+}
+
+function sinElementos(array){
+    let table = document.getElementById('tablaSi')
+    let div = document.getElementById('divNo')
+
+    if(array.length !== 0){
+        table.classList.remove('noMostrar')
+        div.classList.add('noMostrar')
+    }else{
+        table.classList.add('noMostrar')
+        div.classList.remove('noMostrar')
+    }
+    
 }
 
 function busqueda(array, texto) {
