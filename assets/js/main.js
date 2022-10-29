@@ -84,11 +84,12 @@ async function petshop() {
         carritoFiltrado = []
         sumaTotal = 0
         imprimirTotal(sumaTotal)
-        cuerpoCarrito.innerHTML = ``
-        elementContainer.innerHTML = ``
         if (document.title.includes('Carrito')) {
             sinElementos(carritoFiltrado)
         }
+        cuerpoCarrito.innerHTML = ``
+        elementContainer.innerHTML = ``
+
         if (minId.value.length !== 0 || maxId.value.length !== 0 || searchId.value.length !== 0) {
             filtrar()
         } else {
