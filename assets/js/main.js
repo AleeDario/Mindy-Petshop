@@ -4,9 +4,10 @@ const maxId = document.getElementById('max')
 const searchId = document.getElementById('searchId')
 const cuerpoCarrito = document.getElementById('cuerpoCarrito')
 const cuerpoTotal = document.getElementById('cuerpoTotal')
-const vaciarCarrito = document.getElementById('vaciarCarrito')
+const vaciarCarrito = document.querySelectorAll(".vaciarCarrito")
 const tablaCarrito = document.getElementById('tablaCarrito')
 const tablaCarritoTotal = document.getElementById('tablaCarritoTotal')
+const abonar = document.getElementById('abonar')
 
 let baseDeDatos
 let carrito = JSON.parse(localStorage.getItem('carrito')) || []
@@ -49,6 +50,17 @@ async function petshop() {
         </tr>
         `
         }
+
+        abonar.addEventListener('click', terminarDeAbonar)
+
+        function terminarDeAbonar() {
+            Swal.fire(
+                'Gracias',
+                'Tu compra ha sido realizada',
+                'success'
+            )
+            vaciarElCarrito()
+        }
     }
     carritoFiltrado.forEach(imprimirCarrito)
     if (document.title.includes('Carrito')) {
@@ -76,7 +88,7 @@ async function petshop() {
         `
     }
 
-    vaciarCarrito.addEventListener('click', vaciarElCarrito)
+    vaciarCarrito.forEach(element => element.addEventListener('click', vaciarElCarrito))
 
     function vaciarElCarrito() {
         localStorage.removeItem('carrito')
@@ -287,8 +299,6 @@ async function petshop() {
 
     }))
 
-
-
 }
 
 petshop()
@@ -312,18 +322,18 @@ function rango(array, rangoMin, rangoMax) {
     return elementsFilterRango
 }
 
-function sinElementos(array){
+function sinElementos(array) {
     let table = document.getElementById('tablaSi')
     let div = document.getElementById('divNo')
 
-    if(array.length !== 0){
+    if (array.length !== 0) {
         table.classList.remove('noMostrar')
         div.classList.add('noMostrar')
-    }else{
+    } else {
         table.classList.add('noMostrar')
         div.classList.remove('noMostrar')
     }
-    
+
 }
 
 function busqueda(array, texto) {
