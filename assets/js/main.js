@@ -265,7 +265,7 @@ async function petshop() {
                 icon: 'error',
                 title: 'Stock maximo alcanzado',
                 showConfirmButton: false,
-                timer: 1000
+                timer: 1500
             })
             sumaTotalCarrito = filtadoSumaCarrito(carritoFiltrado)
             imprimirTotalCarrito(sumaTotalCarrito)

@@ -65,7 +65,6 @@
 
 .history-img {
     width: 50%;
-    height: 30vh;
     display: flex;
     justify-content: center;
     margin-top: 2em;
@@ -88,27 +87,23 @@
 
 .misionyvision-container {
     width: 100%;
-    justify-content: space-around;
     background-color: #a6bfcc;
     margin-top: 2.5em;
 }
 
 .mision-container {
-    width: 40%;
+    width: 80%;
     display: flex;
-    padding-top: 2em;
+    padding: 2.5em;
     gap: 2em;
 }
 
 .mision-text {
     background-color: rgba(255, 255, 255, 0.638);
     border-radius: 2em;
-    padding: 2em 2em .1em 2em;
     text-align: center;
+    padding: 2em;
     box-shadow: 9px 11px 23px 5px rgba(44, 44, 44, 0.8);
-    margin-bottom: 2em;
-    margin-left: 2em;
-    margin-right: 1em;
 }
 
 .mision-text h2 {
@@ -123,8 +118,9 @@
 }
 
 .vision-container {
-    width: 60%;
+    width: 80%;
     display: flex;
+    padding: 2.5em;
 }
 
 .vision-img {
@@ -136,16 +132,11 @@
 }
 
 .vision-text {
-    width: 75%;
     line-height: 2em;
     background-color: rgba(255, 255, 255, 0.638);
     border-radius: 2em;
-    padding: 2em 2em 0 2em;
+    padding: 2em;
     text-align: center;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    margin-right: 2em;
-    margin-left: 1em;
     box-shadow: 9px 11px 23px 5px rgba(44, 44, 44, 0.8);
 }
 
@@ -442,12 +433,6 @@ td {
         flex-direction: column;
     }
 
-    .vision-container {
-        width: 100%;
-    }
-    .mision-container{
-        width: 100%;
-    }
     .history-text {
         width: 70%;
     }
@@ -457,6 +442,11 @@ td {
         display: none;
     }
 
+    .misionyvision-container{
+        justify-content: center;
+        align-items: center;
+    }
+
     td{
         font-size: .5rem;
     }
@@ -464,6 +454,16 @@ td {
     .container-search{
         justify-content: center;
         align-items: center;
+    }
+
+    .vision-container{
+        width: 90%;
+        padding: 2.5em .5em 2.5em .5em;
+    }
+
+    .mision-container{
+        width: 90%;
+        padding: 2.5em .5em 2.5em .5em;
     }
 
     .vision-text {
