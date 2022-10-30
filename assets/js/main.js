@@ -324,13 +324,16 @@ function rango(array, rangoMin, rangoMax) {
 
 function sinElementos(array) {
     let table = document.getElementById('tablaSi')
+    let btnSi = document.getElementById('btnSi')
     let div = document.getElementById('divNo')
 
     if (array.length !== 0) {
         table.classList.remove('noMostrar')
+        btnSi.classList.remove('noMostrar')
         div.classList.add('noMostrar')
     } else {
         table.classList.add('noMostrar')
+        btnSi.classList.add('noMostrar')
         div.classList.remove('noMostrar')
     }
 

@@ -42,10 +42,10 @@
                             <a class="nav-link" href="../pages/contacto.html">Contacto</a>
                         </li>
                         <li class="nav-item dropdown-center">
-                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="50,20">
-                                <img src="../assets/img/shop.jpg" class="img-fluid"
-                                width="50px"></img>
-                              </button>
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false" data-bs-offset="50,20">
+                                <img src="../assets/img/shop.jpg" class="img-fluid" width="50px"></img>
+                            </button>
                             <div id="carrito" class="dropdown-menu text-center" aria-labelledby="dropdownMenuOffset">
                                 <table id="lista-carrito" class="table">
                                     <thead>
@@ -55,15 +55,16 @@
                                         </tr>
                                     </thead>
                                     <tbody id="cuerpoCarrito">
-        
+
                                     </tbody>
                                     <tbody id="cuerpoTotal">
-                                        
+
                                     </tbody>
                                 </table>
-    
+
                                 <a class="btn btn-danger vaciarCarrito boton-carrito">Vaciar Carrito</a>
-                                <a href="./carrito.html" id="procesar-pedido" class="btn btn-success boton-carrito">Finalizar compra</a>
+                                <a href="./carrito.html" id="procesar-pedido"
+                                    class="btn btn-success boton-carrito">Finalizar compra</a>
                             </div>
                         </li>
                     </ul>
@@ -72,7 +73,7 @@
         </nav>
     </header>
     <main class="main-container mb-5">
-        <table id="tablaSi" class="table container table-stats">
+        <table id="tablaSi" class="table container">
             <thead>
                 <tr>
                     <th class="text-black text-center fs-1 fw-bold" colspan="5">Carrito de compras</th>
@@ -88,28 +89,18 @@
                 </tr>
             </tbody>
             <tbody id="tablaCarrito">
-                
+
             </tbody>
-            <td><br></td>
+
             <tbody id="tablaCarritoTotal">
-                
-            </tbody>
-            <td><br></td>
-            <tbody>
-                <tr>
-                    <td colspan="2"></td>
-                    <td class="text-center">
-                        <a class="btn btn-danger vaciarCarrito boton-carrito">Vaciar Carrito</a>
-                    </td>
-                    <td colspan="3" class="text-center">
-                        <a href="./juguetes.html" class="btn btn-primary boton-carrito">Seguir Comprando</a>
-                    </td>
-                    <td class="text-center">
-                        <a id="abonar" class="btn btn-success boton-carrito">Abonar</a>
-                    </td>
-                </tr>
+
             </tbody>
         </table>
+        <div id="btnSi" class="text-center">
+            <a class="w-25 btn btn-danger vaciarCarrito boton-carrito shop">Vaciar Carrito</a>
+            <a href="./juguetes.html" class="w-25 btn btn-primary boton-carrito shop">Seguir Comprando</a>
+            <a id="abonar" class="w-25 btn btn-success boton-carrito shop">Abonar</a>
+        </div>
         <div id="divNo" class="text-center p-5">
             <img class="img-fluid" src="../assets/img/bolsastock.png" alt="bolsaStock" width="300px">
             <h1>No hay elementos en el carrito</h1>
